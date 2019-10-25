@@ -1,0 +1,64 @@
+let  readlineSync  =  require('readline-sync');
+
+console.log(`WELLCOME TO YOUR GAME`)
+
+var userName = readlineSync.question(`Write your name: `)
+console.log('Hi dear ' + userName + '!');
+
+// var inicio_fin = readlineSync.question(`do you want to start by the beginning of by the end?  `)
+
+const actual_situation = ['Pobre', 'Soltero', 'Drogadicto'];
+console.log(`Esta es tu situacion actual: ${actual_situation}`)
+eleccion_situation = readlineSync.keyInSelect(actual_situation, 'What do you want to change?');
+
+switch(eleccion_situation){
+case 0:
+// if (eleccion_situation = 1){
+    console.log(`Ok... ahora que eres Rico, Soltero y Drogadicto`)
+    // const situation1 = [`Rico`,`Soltero`,`Drogadicto`];
+    const situation1 = [`Buscar_Esposa`, `Comprar_Droga`]
+    eleccion_situation1 = readlineSync.keyInSelect(situation1, 'What do you want to do?');
+    
+    if(eleccion_situation1==0){
+        console.log(`consigues esposa drogadicta que solo quiere dinero y te deja`)
+        console.log(`vuelves a ser ${actual_situation}`)
+    } else{
+        console.log(`gastas todo tu dinero en droga y nadie quiere estar contigo`)
+        console.log(`vuelves a ser ${actual_situation}`)
+    }
+    break;
+
+case 1:
+// }else if (eleccion_situation = 2) {
+    console.log(`Ok... ahora que eres Pobre, Casado y Drogadicto`)
+    // const situation2 = [`Pobre`,`Casado`,`Drogadicto`];
+    const situation2 = [`Robar_Banco`, `Comprar_Droga`]
+    eleccion_situation2 = readlineSync.keyInSelect(situation2, 'What do you want to do?');
+    
+    if(eleccion_situation2==0){
+        console.log(`after 2 years in prison...`)
+        console.log(`vuelves a ser ${actual_situation}`)
+    } else{
+        console.log(`gastas todo tu dinero en droga y nadie quiere estar contigo`)
+        console.log(`vuelves a ser ${actual_situation}`)
+    }
+    
+    break;
+
+case 2:
+// }else if (eleccion_situation = 3) {
+    console.log(`Ok... ahora que eres Pobre, Soltero y Sin Adicciones`)
+    // const situation3 = [`Pobre`,`Soltero`,`Sin_Adicciones`];
+    const situation3 = [`Robar_Banco`, `Buscar_Esposa`]
+    eleccion_situation3 = readlineSync.keyInSelect(situation3, 'What do you want to do?');
+   
+    if(eleccion_situation3==0){
+        console.log(`after 2 years in prison...`)
+        console.log(`vuelves a ser ${actual_situation}`)
+    } else{
+        console.log(`consigues esposa drogadicta que solo quiere dinero y te deja`)
+        console.log(`vuelves a ser ${actual_situation}`)
+    }
+   
+    break;
+}
